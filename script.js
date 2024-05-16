@@ -48,6 +48,7 @@ const initSlider = () => {
         });
     });
 
+    // prev button shown up if >0 and next button will be hidden when it's already maxScroll
     const handleSlideButtons = () => {
         slideButtons[0].style.display = imageList.scrollLeft <= 0 ? "none" : "block";
         slideButtons[1].style.display = imageList.scrollLeft >= maxScrollLeft ? "none" : "block";
@@ -56,7 +57,7 @@ const initSlider = () => {
     // update scroll bar thumb position based on image scroll
     const updateScrollThumbPosition = () => {
         const scrollPosition = imageList.scrollLeft;
-        const thumbPosition = (scrollPosition / (imageList.scrollWidth - imageList.clientWidth)) * (sliderScrollbar.clientWidth - scrollbarThumb.offsetWidth);
+        const thumbPosition = (scrollPosition / maxScrollLeft) * (sliderScrollbar.clientWidth - scrollbarThumb.offsetWidth);
         scrollbarThumb.style.left = `${thumbPosition}px`;
     };
 

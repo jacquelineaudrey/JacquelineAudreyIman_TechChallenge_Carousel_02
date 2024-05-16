@@ -21,14 +21,13 @@ body {
     position: relative;
 }
 
-.slider-wrapper .slide-button {
+.slide-button {
     position: absolute;
     top: 50%;
     height: 50px;
     width: 50px;
     color: white;
     border: none;
-    outline: none;
     background: #32261D;
     font-size: 1.8rem;
     cursor: pointer;
@@ -36,20 +35,20 @@ body {
     transform: translateY(-50%);
 }
 
-.slider-wrapper .slide-button:hover {
+.slide-button:hover {
     background: #756556;
 }
 
-.slider-wrapper .slide-button#prev-slide {
+#prev-slide {
     left: -20px;
     display: none;
 }
 
-.slider-wrapper .slide-button#next-slide {
+#next-slide {
     right: -20px;
 }
 
-.slider-wrapper .image-list {
+.image-list {
     display: grid;
     gap: 25px;
     font-size: 0;
@@ -59,24 +58,24 @@ body {
     grid-template-columns: repeat(10, 1fr);
 }
 
-.slider-wrapper .image-list::-webkit-scrollbar {
+.image-list::-webkit-scrollbar {
     display: none;
 }
 
-.slider-wrapper .image-list .image-item {
+.image-item {
     width: 325px;
     height: 400px;
     object-fit: cover;
 }
 
-.container .slider-scrollbar {
+.slider-scrollbar {
     height: 24px;
     width: 100%;
     display: flex;
     align-items: center;
 }
 
-.slider-scrollbar .scrollbar-track {
+.scrollbar-track {
     height: 2px;
     width: 100%;
     background: #ccc;
@@ -84,11 +83,11 @@ body {
     border-radius: 4px;
 }
 
-.slider-scrollbar:hover .scrollbar-track {
+.scrollbar-track:hover {
     height: 4px;
 }
 
-.slider-scrollbar .scrollbar-thumb {
+.scrollbar-thumb {
     position: absolute;
     height: 100%;
     width: 50%;
@@ -97,13 +96,13 @@ body {
     cursor: grab;
 }
 
-.slider-scrollbar .scrollbar-thumb:active {
+.scrollbar-thumb:active {
     cursor: grabbing;
     height: 6px;
     top: -1px;
 }
 
-.slider-scrollbar .scrollbar-thumb::after {
+.scrollbar-thumb::after {
     content: "";
     position: absolute;
     left: 0;
@@ -113,21 +112,21 @@ body {
 }
 
 @media screen and (max-width: 1023px) {
-    .slider-wrapper .slide-button {
+    .slide-button {
         display: none !important;
     }
 
-    .slider-wrapper .image-list {
+    .image-list {
         gap: 10px;
         margin-bottom: 15px;
     }
 
-    .slider-wrapper .image-list .image-item {
+    .image-item {
         width: 280px;
         height: 380px;
     }
 
-    .slider-scrollbar .scrollbar-thumb {
+    .scrollbar-thumb {
         width: 20%;
     }
 }
