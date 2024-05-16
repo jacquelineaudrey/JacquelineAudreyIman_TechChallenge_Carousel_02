@@ -9,7 +9,7 @@ body {
     justify-content: center; 
     align-items: center;
     min-height: 100vh;
-    background: white;
+    background: #f1e2cc;
 }
 
 .container {
@@ -78,7 +78,7 @@ body {
 .scrollbar-track {
     height: 2px;
     width: 100%;
-    background: #ccc;
+    background: #d3c1ac;
     position: relative;
     border-radius: 4px;
 }
