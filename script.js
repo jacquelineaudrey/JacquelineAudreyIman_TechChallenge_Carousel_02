@@ -50,8 +50,9 @@ const initSlider = () => {
 
     // prev button shown up if >0 and next button will be hidden when it's already maxScroll
     const handleSlideButtons = () => {
+        const tolerance = 1; 
         slideButtons[0].style.display = imageList.scrollLeft <= 0 ? "none" : "block";
-        slideButtons[1].style.display = imageList.scrollLeft >= maxScrollLeft ? "none" : "block";
+        slideButtons[1].style.display = imageList.scrollLeft >= (maxScrollLeft - tolerance) ? "none" : "block";
     };
 
     // update scroll bar thumb position based on image scroll

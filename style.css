@@ -50,7 +50,7 @@ body {
 
 .image-list {
     display: grid;
-    gap: 25px;
+    gap: 40px;
     font-size: 0;
     margin-bottom: 30px;
     overflow-x: auto;
